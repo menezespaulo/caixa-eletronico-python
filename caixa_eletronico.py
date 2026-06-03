@@ -20,14 +20,19 @@ while True:
     print("3. Sacar")
     print("4. Sair")
     opcao = input("Digite o número da operação desejada: ")
-    if opcao == "1":
-        print(f"Saldo em conta: R${saldo_inicial:.2f}")
-    elif opcao == "2":
-        print("Funcionalidade de depósito em construção.")
-    elif opcao == "3":
-        print("Funcionalidade de saque em construção.")
-    elif opcao == "4":
-        print("Obrigado por utilizar o caixa eletrônico XYZ!")
-        break
-    else:
-        print("Opção inválida. Tente novamente.")
+    match opcao:
+        case "1":
+            print(f"Saldo em conta: R${saldo_inicial:.2f}")
+        case "2":
+            print("Funcionalidade de depósito em construção")
+        case "3":
+            print("Funcionalidade de saque em construção")
+        case "4":
+            print("Obrigado por utilizar o caixa eletrônico XYZ.")
+            break
+        case _:
+            print("Opção inválida. Tente novamente")   
+
+
+
+
