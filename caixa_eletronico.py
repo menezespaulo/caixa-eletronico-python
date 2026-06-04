@@ -24,7 +24,10 @@ while True:
         case "1":
             print(f"Saldo em conta: R${saldo_inicial:.2f}")
         case "2":
-            print("Funcionalidade de depósito em construção")
+            valor_deposito = float(input("Insira o valor a ser depositado: "))
+            if valor_deposito > 0:
+                saldo_inicial += valor_deposito 
+                print(f"Seu saldo atualizado é R${saldo_inicial:.2f}")
         case "3":
             print("Funcionalidade de saque em construção")
         case "4":
