@@ -29,7 +29,16 @@ while True:
                 saldo_inicial += valor_deposito 
                 print(f"Seu saldo atualizado é R${saldo_inicial:.2f}")
         case "3":
-            print("Funcionalidade de saque em construção")
+            valor_saque = float(input("Insira o valor que deseja sacar: "))
+            if valor_saque > 0 and valor_saque <= saldo_inicial:
+                saldo_inicial -= valor_saque
+                print(f"Saque de R${valor_saque:.2f} realizado com sucesso!")
+                print(f"Seu saldo atualizado é de R${saldo_inicial:.2f}")
+            elif valor_saque > saldo_inicial:
+             print("Operação cancelada: Saldo insuficiente.")
+            else:
+                print("Valor de saque inválido.")
+        
         case "4":
             print("Obrigado por utilizar o caixa eletrônico XYZ.")
             break
